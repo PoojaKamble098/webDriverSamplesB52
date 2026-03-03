@@ -54,7 +54,7 @@ public void getDetails() {
 	//retrieve the body of the Response
 	  ResponseBody body = response.getBody();
 	  String bodyAsString = body.asString();
-	  System.out.println(bodyAsString);
+	 // System.out.println(bodyAsString);
 }
 
 //@Test
