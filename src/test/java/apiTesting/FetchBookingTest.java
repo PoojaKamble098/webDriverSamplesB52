@@ -48,6 +48,7 @@ public void getDetails() {
 	  Response response = RestAssured.get("/api/tags");
 	  int statusCode = response.getStatusCode();
 	  Assert.assertEquals(statusCode, 200);
+	  System.out.println(response.getStatusCode());
 	  Assert.assertEquals(response.getContentType(),
 			  "application/json; charset=utf-8");
 	//retrieve the body of the Response
@@ -56,22 +57,21 @@ public void getDetails() {
 	  System.out.println(bodyAsString);
 }
 
-@Test
+//@Test
+//
+//public void queryParameter() {
+//	
+//	RestAssured.baseURI ="https://petstore.swagger.io/";
+////	  Response response = RestAssured.get("/pet/findPetsByStatus");
+//	RequestSpecification request =RestAssured.given();
+//	.accept("application/json")
+//	z.queryParam("status", available)
+//	.get("/pet/findBystatus")
+////	Response response = request.queryParam(null, null);
+//	String jsonString = response.asString();
+//	System.out.println(response.getStatusCode());
+//	System.out.println(jsonString);
+//	Assert.assertEquals(jsonString.contains("London"),true);
 
-public void queryParameter() {
-	
-	RestAssured.baseURI ="https://petstore.swagger.io/";
-//	  Response response = RestAssured.get("/pet/findPetsByStatus");
-	RequestSpecification request =RestAssured.given();
-	.accept("application/json")
-	z.queryParam("status", available)
-	.get("/pet/findBystatus")
-//	Response response = request.queryParam(null, null);
-	String jsonString = response.asString();
-	System.out.println(response.getStatusCode());
-	System.out.println(jsonString);
-	Assert.assertEquals(jsonString.contains("London"),true);
 
-
-}
 }
