@@ -48,7 +48,7 @@ public void getDetails() {
 	  Response response = RestAssured.get("/api/tags");
 	  int statusCode = response.getStatusCode();
 	  Assert.assertEquals(statusCode, 200);
-	  System.out.println(response.getStatusCode());
+	  System.out.println(response.getStatusLine());
 	  Assert.assertEquals(response.getContentType(),
 			  "application/json; charset=utf-8");
 	//retrieve the body of the Response
