@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SampleSuite" thread-count="2" parallel="classes">
+	<test name = "ModuleOneTest">
+	 <classes>
+		
+      <class name="ParellelScripts.SampleOneTest"/>
+      </classes>
+      </test>
+      
+      <test name = "ModuleTwoTest">
+	 <classes>
+		
+      <class name="ParellelScripts.SampleTwoTest"/>
+      </classes>
+      </test>
+      
+      
+      
+<!---	
+	<parameter name="browser" value="chrome" />
+  <test thread-count="5" name="ModuleOneTest">
+	  <groups>
+		  <define name="PhaseOne">
+			  <include name="SmokeTest"></include>
+			  <include name="SanityTest"></include>
+			  
+			  </define>
+			  
+		  <run>
+			  <include name = "PhaseOne"></include>
+		  </run>
+	  </groups>
+    <classes>
+		
+      <class name="testScripts.MouseActionsTest"/>
+      <class name="testScripts.AlertTest"/>
+      <class name="testScripts.iFramTest"/>
+      
+      <class name="testScripts.FirstSampleTest"/>
+      <class name="testScripts.ChkBoxdrop"/> -->
+     <!-- ModuleOneTest -->
+</suite> <!-- SampleSuite -->
